@@ -1,30 +1,12 @@
 const jwt=require("jsonwebtoken")
 const express=require("express")
 const mongoose=require("mongoose")
+const app=express() 
 
-const app=express()
+const { userRouter }= require("./routes/user.js")
+const { courserRouter }= require("./routes/course.js")
 
-app.post('/user/signup',async function (req,res) {
-    
-});
-
-
-app.post('/user/signin',async function (req,res) {
-    
-});
-
-
-app.get('/user/purchases',async function (req,res) {
-    
-});
-
-
-app.get('/courses',async function (req,res) {
-    
-});
-
-app.post('/course/purchase',async function (req,res) {
-    
-});
+app.use('/user',userRouter);
+app.use('/course',courserRouter);
 
 app.listen(3000);
