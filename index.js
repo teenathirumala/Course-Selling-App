@@ -4,17 +4,17 @@ const mongoose=require("mongoose")
 
 const app=express()
 
-app.post('/signup',async function (req,res) {
+app.post('/user/signup',async function (req,res) {
     
 });
 
 
-app.get('/login',async function (req,res) {
+app.post('/user/signin',async function (req,res) {
     
 });
 
 
-app.get('/purchase',async function (req,res) {
+app.get('/user/purchases',async function (req,res) {
     
 });
 
@@ -23,6 +23,8 @@ app.get('/courses',async function (req,res) {
     
 });
 
-app.get('/PurchasedCourses',async function (req,res) {
+app.post('/course/purchase',async function (req,res) {
     
 });
+
+app.listen(3000);
